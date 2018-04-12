@@ -1,1 +1,1 @@
-Selected presentations from the classes taught at NYU.
+Selected presentations from classes taught at NYU.
