@@ -104,7 +104,7 @@ label var whites_discriminated "Discrim. against whites: a big problem"
 * CLAIM: Among young moderates, 70% of voted for Clinton in 2016.
  tab ideo5_2016 clinton [aw=weight_2016] if age_group==1, r
  
-* Charts posted at are based on http://janzilinsky.com/voting-patterns-in-2016-age/
+* Charts posted at http://janzilinsky.com/voting-patterns-in-2016-age/ are based on the following:
 tab age_group ideo5_2016 [aw=weight_2016], r nof
 tab age_group democrat [aw=weight_2016], r nof
 
