@@ -7,7 +7,7 @@
 sequence 1110
 label "Uncluttered graphs"
 
-// Bar and line color choices
+// Dots, line and other objects will be draws w these colors 
 color p1      "149 90 118"
 color p2      "137 103 140"
 color p3      "114 136 175"
@@ -37,35 +37,35 @@ color plotregion          white
 color plotregion_line     white
 color matrix_plotregion   white
 
-// Set most other elements to black
-color matplotregion_line  black
-color foreground          black
-color symbol              black
-color text                black
-color body                black
-color small_body          black
-color heading             black
-color subheading          black
-color axis_title          black
-color matrix_label        black
-color label               black
-color key_label           black
-color tick_label          black
-color tick_biglabel       black
-color matrix_marklbl      black
-color sts_risk_label      black
-color sts_risk_title      black
-color text_option         black
-color text_option_line    black
-color filled_text         black
-color axisline            black
-color tick                black
-color minortick           black
-color refmarkline         black
-color dotmarkline         black
-color dots                black
-color matplotregion_line  black
-color legend_line         black
-color clegend_line        black
-color zyx2                black
-color sunflowerdf         black
+// Set most other elements to a shade of grey
+color matplotregion_line  gs8
+color foreground          gs8
+color symbol              gs8
+color text                gs8
+color body                gs8
+color small_body          gs8
+color heading             gs8
+color subheading          gs8
+color axis_title          gs8
+color matrix_label        gs8
+color label               gs8
+color key_label           gs8
+color tick_label          gs10
+color tick_biglabel       gs10
+color matrix_marklbl      gs8
+color sts_risk_label      gs8
+color sts_risk_title      gs8
+color text_option         gs8
+color text_option_line    gs8
+color filled_text         gs8
+color axisline            gs5
+color tick                gs8
+color minortick           gs8
+color refmarkline         gs8
+color dotmarkline         gs8
+color dots                gs8
+color matplotregion_line  gs8
+color legend_line         gs8
+color clegend_line        gs8
+color zyx2                gs8
+color sunflowerdf         gs8
