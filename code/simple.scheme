@@ -13,6 +13,22 @@ color p2      "137 103 140"
 color p3      "114 136 175"
 color p4      "107 220 154"
 
+// Make additional lines change in sensible ways
+linepattern p1lineplot  solid
+linepattern p2lineplot  dash
+linepattern p3lineplot  vshortdash
+linepattern p4lineplot  dot
+linepattern p1line  solid
+linepattern p2line  solid
+linepattern p3line  vshortdash
+linepattern p4line  longdash_dot
+
+// Make points easy to see 
+symbol p1     circle
+symbol p2     circle
+symbol p3     square_hollow
+symbol p4     triangle_hollow
+
 // Non-color settings
 // Most significantly:
 //  * a very small but non-zero margin within the axes
@@ -25,7 +41,6 @@ margin        twoway          vsmall
 linewidth     p               medthick
 anglestyle    vertical_tick   horizontal
 yesno         legend_force_nodraw yes
-symbolsize    p               vsmall
 linewidth     pbar            vvvthin
 
 
@@ -37,28 +52,28 @@ color plotregion          white
 color plotregion_line     white
 color matrix_plotregion   white
 
-// Set most other elements to a shade of grey
+// Set most elements to a shade of grey
 color matplotregion_line  gs8
 color foreground          gs8
-color symbol              gs8
-color text                gs8
-color body                gs8
-color small_body          gs8
-color heading             gs8
-color subheading          gs8
-color axis_title          gs8
-color matrix_label        gs8
-color label               gs8
-color key_label           gs8
+color symbol              gs3
+color text                gs3
+color body                gs3
+color small_body          gs3
+color heading             gs1
+color subheading          gs1
+color axis_title          gs3
+color matrix_label        gs3
+color label               gs3
+color key_label           gs3
 color tick_label          gs10
 color tick_biglabel       gs10
-color matrix_marklbl      gs8
-color sts_risk_label      gs8
-color sts_risk_title      gs8
-color text_option         gs8
-color text_option_line    gs8
-color filled_text         gs8
-color axisline            gs5
+color matrix_marklbl      gs4
+color sts_risk_label      gs4
+color sts_risk_title      gs4
+color text_option         gs3
+color text_option_line    gs4
+color filled_text         gs3
+color axisline            gs3
 color tick                gs8
 color minortick           gs8
 color refmarkline         gs8
