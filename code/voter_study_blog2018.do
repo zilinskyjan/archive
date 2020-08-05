@@ -1,5 +1,6 @@
 * Author: Jan Zilinsky
 
+* Data available at: https://www.voterstudygroup.org/data
 use "2017_VOTER/VOTER_Survey_July17_Release1-dta.dta"
 set more off, perm
 
@@ -101,59 +102,11 @@ label var whites_discriminated "Discrim. against whites: a big problem"
 * BLOG
 ******
 
-* CLAIM: Among young moderates, 70% of voted for Clinton in 2016.
+* CLAIM: Among young moderates, 70% voted for Clinton in 2016.
  tab ideo5_2016 clinton [aw=weight_2016] if age_group==1, r
  
-* Charts posted at http://janzilinsky.com/voting-patterns-in-2016-age/ are based on the following:
+* Charts originally posted at http://janzilinsky.com/voting-patterns-in-2016-age/ are based on the following:
 tab age_group ideo5_2016 [aw=weight_2016], r nof
 tab age_group democrat [aw=weight_2016], r nof
-
-
-
-
-
-
-
-*****************
-* INEQULAITY VARS
-*****************
-
-gen more_equal_wealth_dist = (wealth_2016==2) if !mi(wealth_2016)
-
-gen raise_tax_on_wealthy = (taxdoug_2016==1) if !mi(taxdoug_2016) /*"Do you favor raising taxes on families with incomes over $200,000 per year?" 1=yes*/
-label var raise_tax_on_wealthy "Raise taxes on the rich"
-
-*****************************
-* Other independent variables
-*****************************
-gen econ_better = (econtrend_2016==1) if !mi(econtrend_2016)
-
-
-gen opposed_trade_in_2011 = (tradepolicy_baseline==2) if !mi(tradepolicy_baseline)
-label define trade_op 0 "Favor increasing trade" 1 "Oppose increasing trade"
-label values opposed_trade_in_2011 trade_op
-
-gen crime_very_important = (imiss_a_2016==1) if !mi(imiss_a_2016)
-gen economy_very_important = (imiss_b_2016==1) if !mi(imiss_b_2016)
-gen immigration_very_important = (imiss_c_2016==1) if !mi(imiss_c_2016)
-
-gen immig_drain = (immi_contribution_2016==3) if !mi(immi_contribution_2016)
-gen immig_restrict_demparty = (PARTY_AGENDAS_D8_2016==5) if !mi(PARTY_AGENDAS_D8_2016)
-gen immig_restrict_repparty = (PARTY_AGENDAS_R8_2016==5) if !mi(PARTY_AGENDAS_R8_2016)
-
-gen sanders_prim_vote = (pp_demprim16_2016==2) if !mi(pp_demprim16_2016)
-gen sander_very_favorable = (fav_sanders_2016==1) if !mi(fav_sanders_2016) 
-gen sander_favorable = (fav_sanders_2016==1 | fav_sanders_2016==2) if !mi(fav_sanders_2016) 
-
-gen whites_discriminated = (reverse_discrimination_2016==1) if !mi(reverse_discrimination_2016) /* "Today discrimination against whites has become as big a problem" 1==Stronlgy agree*/
-
-gen dislikes_muslims = (ft_muslim_2016 <=24)
-gen dislikes_immigrants =  (ft_muslim_2016 <=ft_immig_2016)
-
-* URBAN v RURAL
-gen city_voter = (urbancity_baseline==1) if !mi(urbancity_baseline)
-gen rural_voter = (urbancity_baseline==4) if !mi(urbancity_baseline)
-label var city_voter "Urban voter"
-label var rural_voter "Rural voter"
 
 
